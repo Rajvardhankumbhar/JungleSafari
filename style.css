@@ -1,0 +1,381 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f2f7f0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #1e2f1e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #c1e1c1;
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 25px;
+  color: #dbeadf;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #88b788;
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: fadeUp 2s ease forwards;
+}
+
+.hero button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #88b788;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  background-color: #6a8c6a;
+}
+
+@keyframes fadeUp {
+  0% {opacity:0; transform: translateY(20px);}
+  100% {opacity:1; transform: translateY(0);}
+}
+
+.safari-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.safari-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2a4d2a;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: #e5f0e5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #1e2f1e;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #4a5e4a;
+  margin: 0 0 10px 0;
+}
+
+.card-content .price {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2a4d2a;
+}
+
+.card-content button {
+  padding: 10px 20px;
+  background-color: #88b788;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card-content button:hover {
+  background-color: #6a8c6a;
+  transform: scale(1.05);
+}
+
+.about-section {
+  background-color: #d9eed9;
+  padding: 60px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #1e2f1e;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #4a5e4a;
+  line-height: 1.6;
+}
+
+.about-text button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #88b788;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.about-text button:hover {
+  background-color: #6a8c6a;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.gallery {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+
+.gallery .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.gallery .card:hover img {
+  transform: scale(1.1);
+}
+
+.gallery .card caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(30,47,30,0.7);
+  width: 100%;
+  color: #fff;
+  padding: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-left: 4px;
+}
+
+.testimonials-section {
+  background-color: #cce5cc;
+  padding: 60px 20px;
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e2f1e;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: #e5f0e5;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #4a5e4a;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.testimonial-card h4 {
+  font-size: 1rem;
+  color: #1e2f1e;
+  margin-bottom: 5px;
+}
+
+.testimonial-card span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.contact {
+  background-color: #d9eed9;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.contact h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #1e2f1e;
+  margin-bottom: 40px;
+}
+
+.booking {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking input, .booking select, .booking textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #88b788;
+  outline: none;
+}
+
+.booking textarea {
+  resize: none;
+  height: 100px;
+}
+
+.booking input:focus, .booking select:focus, .booking textarea:focus {
+  border-color: #6a8c6a;
+  box-shadow: 0 0 5px #6a8c6a;
+}
+
+.right {
+  flex: 1;
+  min-width: 280px;
+  background-color: #e5f0e5;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right p {
+  color: #1e2f1e;
+}
+
+footer {
+  background-color: #1e2f1e;
+  color: #c1e1c1;
+  text-align: center;
+  padding: 20px;
+}
